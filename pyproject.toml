@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools >= 70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ligo"
+authors = [
+  { name="Ligo Scientific Collaboration (LSC) and Navein Suresh", email="naveinsuresh@berkeley.edu" },
+]
+description = "A Python library to run the LOSC scientific notebook"
+readme = "README.md"
+
+requires-python = ">=3.8"
+dependencies = ["numpy==1.23", "h5py==3.7", "matplotlib==3.5", "ipython==8.2", "ipykernel==5.5", "decorator==5.1", "scipy==1.8"]
+
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/UCB-stat-159-f25/hw3-naveinsuresh"
+Issues = "https://github.com/UCB-stat-159-f25/hw3-naveinsuresh/issues"
+
+[tool.setuptools]
+packages = ["ligotools"]
+
+[tool.setuptools.dynamic]
+version = {attr = "ligotools.__version__"}
