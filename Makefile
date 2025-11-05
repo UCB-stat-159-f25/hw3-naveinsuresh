@@ -8,4 +8,4 @@ html:
 
 clean:
 	rm -rf _build
-    rm -f audio/* figures/*
+	rm -f audio/* figures/*
