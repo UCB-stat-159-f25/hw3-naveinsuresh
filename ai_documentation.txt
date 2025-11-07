@@ -1,0 +1,19 @@
+1. Q: How do I define version dynamically when creating a .toml file?
+
+A: Include -- dynamic = ["version"] --  & -- [tool.setuptools.dynamic] version = {attr = "ligotools.__version__"} -- in .toml file. Make sure to add a specific version number in the __init__.py file of your package.
+
+2. Q: How do I use the try/except format to catch whether a particular type of dictionary error message is printed properly?
+
+A: Use "KeyError" in the except phrase to identify if a dictionary key missing error exists.
+
+3. Q: How do I verify if a recently created file exists and immediately remove it after the test ends?
+
+A: Import the os package and use os.path.exists() to verify the path. Use os.remove() after assertion to remove the created file.
+
+4. How do I add multiple operations to a .PHONY clause in a Makefile?
+
+A: Define .PHONY at the top and add mutliple operation group in a row.
+
+5. Whats the notation to remove an entire directory in a Makefile?
+
+A: Use -- rm -rf {directory} -- to completely delete a particular directory.
